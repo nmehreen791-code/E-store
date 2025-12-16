@@ -41,14 +41,14 @@ let transporter = nodemailer.createTransport({
   port: 587,
   secure: false,
   auth: {
-    user: "iamhamza013@gmail.com", // gmail
+    user: "mehreennoor253@gmail.com", // gmail
     pass: process.env.EMAIL_PASSWORD, // pass
   },
 });
 
 exports.sendMail = async function ({ to, subject, text, html }) {
   let info = await transporter.sendMail({
-    from: '"E-commerce" <iamhamza013@gmail.com>', // sender address
+    from: '"E-commerce" <mehreennoor253@gmail.com>', // sender address
     to,
     subject,
     text,
@@ -251,7 +251,7 @@ exports.invoiceTemplate = function (order) {
            <!-- start copy -->
            <tr>
              <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-               <p style="margin: 0;">Here is a summary of your recent order. If you have any questions or concerns about your order, please <a href="iamhamza013@gmail.com">contact us</a>.</p>
+               <p style="margin: 0;">Here is a summary of your recent order. If you have any questions or concerns about your order, please <a href="mehreennoor253@gmail.com">contact us</a>.</p>
              </td>
            </tr>
            <!-- end copy -->
