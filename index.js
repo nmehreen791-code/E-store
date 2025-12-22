@@ -76,7 +76,7 @@ server.use("/categories", categoriesRouter.router);
 server.use("/brands", brandsRouter.router);
 server.use("/users", isAuth(), userRouter.router);
 server.use("/auth", authRouter.router);
-server.use("/carts", isAuth(), cartRouter.router);
+server.use("/carts", cartRouter.router);
 server.use("/orders", isAuth(), ordersRouter.router);
 server.use("/contact", isAuth(), contactRouter.router);
 
