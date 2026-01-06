@@ -3,8 +3,8 @@ const { Schema } = mongoose;
 
 const categorySchema = new Schema(
   {
-    slug: { type: String, required: true, unique: true },
-    value: { type: String, required: true, unique: true },
+    slug: { type: String, required: true },
+    value: { type: String, required: true },
     image: {
       type: String,
     },
