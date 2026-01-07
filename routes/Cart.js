@@ -1,3 +1,4 @@
+
 const express = require("express");
 const {
   fetchCartByUser,
@@ -6,15 +7,14 @@ const {
   deleteFromCart,
   mergeGuestCart,
 } = require("../controller/Cart");
-const { isAuth } = require("../server/Common");
 
 const router = express.Router();
-
+// brands is already added in base path
 router
-  .post("/", isAuth(), addToCart)
-  .get("/", isAuth(), fetchCartByUser)
-  .delete("/:id", isAuth(), deleteFromCart)
-  .patch("/:id", isAuth(), updateCart)
-  .post("/merge", isAuth(), mergeGuestCart);
+  .post("/", addToCart)
+  .get("/", fetchCartByUser)
+  .delete("/:id", deleteFromCart)
+  .patch("/:id", updateCart)
+  .post("/merge", mergeGuestCart);
 
 exports.router = router;
