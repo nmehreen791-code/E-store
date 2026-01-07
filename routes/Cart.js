@@ -11,10 +11,10 @@ const { isAuth } = require("../server/Common");
 const router = express.Router();
 // brands is already added in base path
 router
-  .post("/", addToCart)
+  .post("/", isAuth(), addToCart)
   .get("/", isAuth(), fetchCartByUser)
-  .delete("/:id", deleteFromCart)
-  .patch("/:id", updateCart)
-  .post("/merge", mergeGuestCart);
+  .delete("/:id",isAuth(),  deleteFromCart)
+  .patch("/:id",isAuth(),  updateCart)
+  .post("/merge",isAuth(),  mergeGuestCart);
 
 exports.router = router;
